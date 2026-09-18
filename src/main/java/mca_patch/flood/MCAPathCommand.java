@@ -23,8 +23,7 @@ public final class MCAPathCommand {
         source.sendFeedback(() -> Text.literal("MCA path patch: mode=" + config.mode + ", instrumentation=" + config.instrumentation), false);
         source.sendFeedback(() -> Text.literal("searches=" + stats.pathSearches()
                 + ", candidates=" + stats.candidateClassifications()
-                + ", landNodes=" + stats.landNodeClassifications()
-                + ", neighborChecks=" + stats.neighborHazardChecks()
+                + ", landNodes=n/a, neighborChecks=n/a (MCA 1.21 uses vanilla statics)"
                 + ", collisions=" + stats.collisionChecks()), false);
         source.sendFeedback(() -> Text.literal("measuredTicks=" + stats.measuredTicks()
                 + ", maxSearches/tick=" + stats.maxTickPathSearches()

@@ -31,9 +31,9 @@ object MCATickUsagePatch : ModInitializer {
 		}
 
 		try {
-			Class.forName("fabric.net.mca.entity.VillagerEntityMCA")
-			Class.forName("fabric.net.mca.entity.ai.pathfinder.VillagerLandPathNodeMaker")
-			logger.info("Found MCA 7.x Fabric pathfinding classes; check earlier log lines for Mixin application warnings.")
+			Class.forName("net.conczin.mca.entity.VillagerEntityMCA")
+			Class.forName("net.conczin.mca.entity.ai.navigation.MCAWalkNodeEvaluator")
+			logger.info("Found MCA 7.7.36+ (1.21.1) navigation classes; check earlier log lines for Mixin application warnings.")
 		} catch (throwable: Throwable) {
 			logger.error("Could not verify MCA pathfinding targets. This MCA version may be incompatible.", throwable)
 		}

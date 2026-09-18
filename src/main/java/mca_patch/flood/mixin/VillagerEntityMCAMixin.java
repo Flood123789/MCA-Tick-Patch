@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Pseudo
-@Mixin(targets = "fabric.net.mca.entity.VillagerEntityMCA")
+@Mixin(targets = "net.conczin.mca.entity.VillagerEntityMCA")
 public abstract class VillagerEntityMCAMixin {
     @Inject(method = {"createNavigation", "method_5965"}, at = @At("HEAD"), cancellable = true, remap = false)
     private void mcaTickPatch$useVanillaNavigation(World world, CallbackInfoReturnable<EntityNavigation> callback) {
