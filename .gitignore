@@ -38,3 +38,6 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# Local tool caches and scratch (added 2026-09-18; never commit)
+.claude/

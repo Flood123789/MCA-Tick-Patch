@@ -3,13 +3,12 @@
 	"id": "mca-tick-usage-patch",
 	"version": "${version}",
 	"name": "MCA Tick Usage Patch",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Configurable navigation baseline and low-overhead pathfinding instrumentation for Minecraft Comes Alive.",
 	"authors": [
-		"Me!"
+		"brand"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/brand/mca-tick-usage-patch"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/mca-tick-usage-patch/icon.png",
@@ -21,25 +20,10 @@
 				"adapter": "kotlin"
 			}
 		],
-		"client": [
-			{
-				"value": "mca_patch.flood.client.MCATickUsagePatchClient",
-				"adapter": "kotlin"
-			}
-		],
-		"fabric-datagen": [
-			{
-				"value": "mca_patch.flood.client.MCATickUsagePatchDataGenerator",
-				"adapter": "kotlin"
-			}
-		]
+		"client": []
 	},
 	"mixins": [
-		"mca-tick-usage-patch.mixins.json",
-		{
-			"config": "mca-tick-usage-patch.client.mixins.json",
-			"environment": "client"
-		}
+		"mca-tick-usage-patch.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
@@ -47,5 +31,8 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"mca": ">=7.6.3"
 	}
 }
